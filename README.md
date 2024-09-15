@@ -7,10 +7,6 @@ This template supports the content needed by small businesses, including the fol
 Fork [this repository](https://github.com/jayreddivari/single-page-small-business-web-application), modify the configuration and files, and have your business website for free by publishing this code on [github pages](https://pages.github.com/) or any other domain.
 
 
-## Demo 
-Here you can check the [Demo](https://jayreddivari.github.io/single-page-small-business-web-application/) online:
-
-![Demo Image](./src/images/demo.png)
 
 
 ## Getting started
@@ -45,7 +41,4 @@ You can upload and replace your business images as below template in the `images
 ## Authors
 Reza Azimifar
 
-<a href="https://rezaexplains.com/">![Static Badge](https://img.shields.io/badge/website%20-%20%23282828?style=for-the-badge&logo=esri&logoColor=%23CCFF00&color=%23282828)</a>
-<a href="mailto:azimifar.reza@gmail.com@gmail.com">![Static Badge](https://img.shields.io/badge/Gmail%20-%20%23282828?style=for-the-badge&logo=gmail&color=%23282828)</a>
-<a href="https://www.linkedin.com/in/jayreddivari/">![Static Badge](https://img.shields.io/badge/linkedin%20-%20%23282828?style=for-the-badge&logo=linkedin&logoColor=%230A66C2&color=%23282828)</a>
-<a href="https://www.instagram.com/reza.explains/">![Static Badge](https://img.shields.io/badge/instagram%20-%20%23282828?style=for-the-badge&logo=instagram&color=%23282828)</a>
+<a href="mailto: reddy.jayanthi.jr@gmail.com@gmail.com">![Static Badge](https://img.shields.io/badge/Gmail%20-%20%23282828?style=for-the-badge&logo=gmail&color=%23282828)</a>

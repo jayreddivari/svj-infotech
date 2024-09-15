@@ -15,6 +15,10 @@
     </head>
 
     <body>
+
+        <div style="background-image: url('/src/images/bg.jpeg'); background-size: cover; background-position: center; height: 728px;">
+
+        
         <header class="header" id="header">
             <nav class="nav container">
                 <a class="nav__logo" href="#">SVJ Infotech</a>
@@ -50,22 +54,22 @@
 
         <section class="home section" id="home">
             <div class="home__container container">
-                <article class="svg__img home__img" id="img1"></article>
+                <!-- <article class="svg__img home__img" id="img1"></article> -->
                
 
                 <article class="home__info">
                     <h1 class="home__title">
                         <!-- Lorem ipsum dolor sit. <br> -->
-                        <span>Home</span>
+                        <span style="font-size: 36px;">Home</span>
                     </h1>
-                    <p class="home__description">
+                    <p class="home__description" style="font-size: 16px; font-weight: 600; color: midnightblue;">
                         Welcome to SVJ Infotech, where we deliver cutting-edge IT consulting solutions tailored to your business needs. From strategy to execution, we empower your growth by providing scalable and innovative technology solutions. Our mission is to simplify complex challenges, enabling you to focus on what matters most – your success. Let us partner with you to navigate every stage of your digital journey with confidence.
                     </p>
                     <a href="#" class="button">Know More</a>
                 </article>
             </div>
         </section>
-
+    </div>
         <section class="about section" id="about">
             <div class="about__container container">
                 <article class="about__info">
@@ -108,15 +112,19 @@
             <div class="services__container container">
                 <article class="services__info">
                     <h3 class="services__title">Cloud Solutions</h3>
-                    <i class="services__icon bi bi-browser-chrome"></i>
-                    <p class="services__description">Cloud solutions are our specialty at SVJ Infotech, focusing on designing and implementing Strategic Information Systems that optimize data value for corporations and government entities.</p>
+                    <!-- <i class="services__icon bi bi-browser-chrome"></i> -->
+                    <img src="/src/images/cloud.jpeg" class="customfitServiceImages" style="width: 37% !important; display: block !important; margin: 0 auto !important;" alt="Service Image">
+                    <!-- <img src="/src/images/cloud_solutions.png" alt="cloud solution" class="customfitServiceImages" /> -->
+                    <p class="services__description"><br>Cloud solutions are our specialty at SVJ Infotech, focusing on designing and implementing Strategic Information Systems that optimize data value for corporations and government entities.<br></p>
                     <div>
                         <a class="button button-link" href="#">see more</a>
                     </div>
                 </article>
                 <article class="services__info">
                     <h3 class="services__title">Software Development</h3>
-                    <i class="services__icon bi bi-browser-edge"></i>
+                    <!-- <i class="services__icon bi bi-browser-edge"></i> -->
+                    <!-- <img src="/src/images/software_development.png" alt="cloud solution" class="customfitServiceImages" /> -->
+                    <img src="/src/images/software.jpeg" class="customfitServiceImages" style="width: 37% !important; display: block !important; margin: 0 auto !important;" alt="Service Image">
                     <p class="services__description">Our software development services are designed to address your specific business requirements. From initial consultation to final implementation, we ensure that every solution we create is aligned with your strategic goals.</p>
                     <div>
                         <a class="button button-link" href="#">see more</a>
@@ -124,7 +132,9 @@
                 </article>
                 <article class="services__info">
                     <h3 class="services__title">Managed Services</h3>
-                    <i class="services__icon bi bi-browser-firefox"></i>
+                    <!-- <i class="services__icon bi bi-browser-firefox"></i> -->
+                    <!-- <img src="/src/images/managed_services.png" alt="Managed Services" class="customfitServiceImages" /> -->
+                    <img src="/src/images/managed.jpeg" class="customfitServiceImages" style="width: 37% !important; display: block !important; margin: 0 auto !important;" alt="Service Image">
                     <p class="services__description">At SVJ Infotech, our Managed Services are designed to help businesses achieve operational excellence by managing their IT infrastructure and systems efficiently.</p>
                     <div>
                         <a class="button button-link" href="#">see more</a>
