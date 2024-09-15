@@ -1,22 +1,22 @@
 {
-  "name": "one-page-business-website",
+  "name": "svj-infotech",
   "version": "1.0.0",
   "description": "responsive one-page website designed for businesses looking to establish a strong online presence with minimal complexity",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "sass": "sass -w src/scss/styles.scss src/css/styles.css"
+    "serve": "sass -w src/scss/styles.scss src/css/styles.css"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reza-azimifar/one-page-business-website.git"
+    "url": "git+https://github.com/jayreddivari/svj-infotech.git"
   },
   "author": "Reza Azimifar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/reza-azimifar/one-page-business-website/issues"
+    "url": "https://github.com/jayreddivari/svj-infotech/issues"
   },
-  "homepage": "https://github.com/reza-azimifar/one-page-business-website#readme",
+  "homepage": "https://github.com/jayreddivari/svj-infotech#readme",
   "devDependencies": {
     "@babel/core": "^7.24.5",
     "@babel/preset-env": "^7.24.5",
