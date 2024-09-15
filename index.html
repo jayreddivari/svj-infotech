@@ -16,8 +16,14 @@
 
     <body>
 
-        <div style="background-image: url('/src/images/bg.jpeg'); background-size: cover; background-position: center; height: 728px;">
-
+        <!-- <div style="background-image: url('/src/images/bg.jpeg'); background-size: cover; background-position: center; height: 728px;"> -->
+        
+        <div style="position: relative; height: 728px; overflow: hidden;">
+                <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translateX(-50%) translateY(-50%);">
+                    <source src="/src/images/bg_video.MOV" type="video/mp4">
+                    <img src="/src/images/alternate_image.jpg" alt="Alternate Image" style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translateX(-50%) translateY(-50%);">
+                </video>
+                <div style="position: relative; z-index: 1;">
         
         <header class="header" id="header">
             <nav class="nav container">
@@ -55,13 +61,14 @@
                     <h1 class="home__title">
                         <span style="font-size: 36px;">Home</span>
                     </h1>
-                    <p class="home__description" style="font-size: 16px; font-weight: 600; color: midnightblue;">
+                    <p class="home__description" style="font-size: 18px; font-weight: 600; color: white;">
                         Welcome to SVJ Infotech, where we deliver cutting-edge IT consulting solutions tailored to your business needs. From strategy to execution, we empower your growth by providing scalable and innovative technology solutions. Our mission is to simplify complex challenges, enabling you to focus on what matters most – your success. Let us partner with you to navigate every stage of your digital journey with confidence.
                     </p>
                     <a href="#" class="button">Know More</a>
                 </article>
             </div>
         </section>
+                </div>
     </div>
         <section class="about section" id="about">
             <div class="about__container container">
