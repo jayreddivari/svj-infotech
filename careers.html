@@ -186,7 +186,8 @@
     <div class="job-card-container">
         <!-- UI/UX & Product Designer Card -->
         <div class="job-card ui-ux">
-            <a href="#" id="apply-software-engineer" class="external-link">Apply</a>
+            <a href="#" id="apply-software-engineer" class="external-link" title="Apply here..">↗</a>
+
             <div class="job-title">UI/UX & Product Designer</div>
             <div class="job-type">Full Time</div>
             <div class="job-description">
@@ -226,19 +227,53 @@
             </div>
         </div>
 
-        <!-- Business Analyst Card -->
-        <div class="job-card business-analyst">
+       
+    </div>
+    <div class="job-card-container">
+        <!-- UI/UX & Product Designer Card -->
+        <div class="job-card ui-ux">
+            <a href="#" id="apply-software-engineer" class="external-link" title="Apply here..">↗</a>
+
+            <div class="job-title">UI/UX & Product Designer</div>
+            <div class="job-type">Full Time</div>
+            <div class="job-description">
+                Product design encompasses both UI/UX design but it also involves a broader understanding of the entire product.
+            </div>
+            <div class="job-info">
+                <span class="location">📍 London, UK</span>
+                <span class="salary">💼 $23k–35K</span>
+            </div>
+        </div>
+
+        <!-- Project Manager Card -->
+        <div class="job-card project-manager">
             <a href="#" class="external-link">↗</a>
-            <div class="job-title">Business Analysts</div>
-            <div class="job-type">Remote</div>
+            <div class="job-title">Project Manager</div>
+            <div class="job-type">Full Time</div>
             <div class="job-description">
                 As of July 22, 2021, our team will require that all candidate submissions include a LinkedIn profile.
             </div>
             <div class="job-info">
-                <span class="location">📍 Boston, MA, 02210</span>
-                <span class="salary">💼 $35k–45K</span>
+                <span class="location">📍 Hoboken, NJ, 07030</span>
+                <span class="salary">💼 $50k–55K</span>
             </div>
         </div>
+
+        <!-- SQL/SSIS Developer Card -->
+        <div class="job-card sql-developer">
+            <a href="#" class="external-link">↗</a>
+            <div class="job-title">SQL/SSIS Developer</div>
+            <div class="job-type">Full Time</div>
+            <div class="job-description">
+                We are seeking a skilled SQL/SSIS Developer to join our Fortune 500 client’s team on a contract basis.
+            </div>
+            <div class="job-info">
+                <span class="location">📍 Saint Louis, MO, 63131</span>
+                <span class="salary">💼 $23k–35K</span>
+            </div>
+        </div>
+
+       
     </div>
 
     <!-- Modal Structure -->
@@ -261,7 +296,7 @@
 </body>
 
 <script>
-    function openModal() {
+    document.addEventListener("DOMContentLoaded", function() {
         var modal = document.getElementById("applyModal"); // Get the modal
         var btn = document.getElementById("apply-software-engineer"); // Get the button that opens the modal
         var closeBtn = document.getElementsByClassName("modal-close")[0]; // Get the <span> element that closes the modal
@@ -283,9 +318,6 @@
                 modal.style.display = "none"; // Hide the modal
             }
         }
-    }
-
-    // Initialize modal function on page load
-    window.onload = openModal;
+    });
 </script>
 </html>
