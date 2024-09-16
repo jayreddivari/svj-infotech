@@ -1,79 +1,291 @@
-<!-- careers.html -->
-<section class="careers section" id="careers">
-    <div class="careers__container container">
-        <h1 class="section__title">Careers</h1>
-        <div class="job-cards">
-            <!-- Job Card 1 -->
-            <div class="job-card">
-                <h2 class="job-title">UI/UX & Product Designer</h2>
-                <p class="job-type">Full Time</p>
-                <p class="job-description">
-                    Product design encompasses both UI/UX design but it also involves a broader understanding of the entire product.
-                </p>
-                <p class="job-location">
-                    <i class="bi bi-geo-alt"></i> London, UK
-                </p>
-                <p class="job-salary">
-                    <i class="bi bi-cash-stack"></i> $23k-35K
-                </p>
-                <a href="#" class="job-link">
-                    <i class="bi bi-box-arrow-up-right"></i>
-                </a>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Cards with Modal</title>
+    <style>
+        /* General Styles for the Job Cards */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
 
-            <!-- Job Card 2 -->
-            <div class="job-card">
-                <h2 class="job-title">Project Manager</h2>
-                <p class="job-type">Full Time</p>
-                <p class="job-description">
-                    As of July 22, 2021, our team will require that all candidate submissions include a LinkedIn profile.
-                </p>
-                <p class="job-location">
-                    <i class="bi bi-geo-alt"></i> Hoboken, NJ, 07030
-                </p>
-                <p class="job-salary">
-                    <i class="bi bi-cash-stack"></i> $50k-55k
-                </p>
-                <a href="#" class="job-link">
-                    <i class="bi bi-box-arrow-up-right"></i>
-                </a>
-            </div>
+        .job-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 20px;
+        }
 
-            <!-- Job Card 3 -->
-            <div class="job-card">
-                <h2 class="job-title">SQL/SSIS Developer</h2>
-                <p class="job-type">Full Time</p>
-                <p class="job-description">
-                    We are seeking a skilled SQL/SSIS Developer to join our Fortune 500 client’s team on a contract basis.
-                </p>
-                <p class="job-location">
-                    <i class="bi bi-geo-alt"></i> Saint Louis, MO, 63131
-                </p>
-                <p class="job-salary">
-                    <i class="bi bi-cash-stack"></i> $23k-35k
-                </p>
-                <a href="#" class="job-link">
-                    <i class="bi bi-box-arrow-up-right"></i>
-                </a>
-            </div>
+        .job-card {
+            width: 350px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            position: relative;
+            transition: transform 0.2s ease;
+        }
 
-            <!-- Job Card 4 -->
-            <div class="job-card">
-                <h2 class="job-title">Business Analyst</h2>
-                <p class="job-type">Remote</p>
-                <p class="job-description">
-                    As of July 22, 2021, our team will require that all candidate submissions include a LinkedIn profile.
-                </p>
-                <p class="job-location">
-                    <i class="bi bi-geo-alt"></i> Boston, MA, 02210
-                </p>
-                <p class="job-salary">
-                    <i class="bi bi-cash-stack"></i> $35k-45k
-                </p>
-                <a href="#" class="job-link">
-                    <i class="bi bi-box-arrow-up-right"></i>
-                </a>
+        .job-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Styling the title */
+        .job-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2b2b2b;
+            margin-bottom: 10px;
+        }
+
+        /* Styling the job type */
+        .job-type {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Styling for the description */
+        .job-description {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Location and Salary */
+        .job-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .job-info span {
+            display: flex;
+            align-items: center;
+        }
+
+        .job-info .location,
+        .job-info .salary {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* External link icon */
+        .external-link {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            text-decoration: none;
+        }
+
+        .external-link:hover {
+            background-color: #333;
+        }
+
+        /* Different background colors for job cards */
+        .ui-ux {
+            background-color: #e7f6e7;
+        }
+
+        .project-manager {
+            background-color: #fce9e9;
+        }
+
+        .sql-developer {
+            background-color: #fff2e4;
+        }
+
+        .business-analyst {
+            background-color: #fff9d7;
+        }
+
+        /* Modal container */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+        }
+
+        /* Modal content box */
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto; /* Center the modal vertically and horizontally */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%; /* Adjust the width */
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+
+        /* Close button */
+        .modal-close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Close button hover effect */
+        .modal-close:hover,
+        .modal-close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Form styling inside modal */
+        .modal form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal form input[type="email"],
+        .modal form input[type="file"] {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .modal form button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .modal form button:hover {
+            background-color: #218838;
+        }
+
+        /* Modal footer */
+        .modal-footer {
+            text-align: right;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="job-card-container">
+        <!-- UI/UX & Product Designer Card -->
+        <div class="job-card ui-ux">
+            <a href="#" id="apply-software-engineer" class="external-link">Apply</a>
+            <div class="job-title">UI/UX & Product Designer</div>
+            <div class="job-type">Full Time</div>
+            <div class="job-description">
+                Product design encompasses both UI/UX design but it also involves a broader understanding of the entire product.
+            </div>
+            <div class="job-info">
+                <span class="location">📍 London, UK</span>
+                <span class="salary">💼 $23k–35K</span>
+            </div>
+        </div>
+
+        <!-- Project Manager Card -->
+        <div class="job-card project-manager">
+            <a href="#" class="external-link">↗</a>
+            <div class="job-title">Project Manager</div>
+            <div class="job-type">Full Time</div>
+            <div class="job-description">
+                As of July 22, 2021, our team will require that all candidate submissions include a LinkedIn profile.
+            </div>
+            <div class="job-info">
+                <span class="location">📍 Hoboken, NJ, 07030</span>
+                <span class="salary">💼 $50k–55K</span>
+            </div>
+        </div>
+
+        <!-- SQL/SSIS Developer Card -->
+        <div class="job-card sql-developer">
+            <a href="#" class="external-link">↗</a>
+            <div class="job-title">SQL/SSIS Developer</div>
+            <div class="job-type">Full Time</div>
+            <div class="job-description">
+                We are seeking a skilled SQL/SSIS Developer to join our Fortune 500 client’s team on a contract basis.
+            </div>
+            <div class="job-info">
+                <span class="location">📍 Saint Louis, MO, 63131</span>
+                <span class="salary">💼 $23k–35K</span>
+            </div>
+        </div>
+
+        <!-- Business Analyst Card -->
+        <div class="job-card business-analyst">
+            <a href="#" class="external-link">↗</a>
+            <div class="job-title">Business Analysts</div>
+            <div class="job-type">Remote</div>
+            <div class="job-description">
+                As of July 22, 2021, our team will require that all candidate submissions include a LinkedIn profile.
+            </div>
+            <div class="job-info">
+                <span class="location">📍 Boston, MA, 02210</span>
+                <span class="salary">💼 $35k–45K</span>
             </div>
         </div>
     </div>
-</section>
+
+    <!-- Modal Structure -->
+    <div id="applyModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Apply for UI/UX & Product Designer</h2>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="resume">Upload Resume:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function openModal() {
+        var modal = document.getElementById("applyModal"); // Get the modal
+        var btn = document.getElementById("apply-software-engineer"); // Get the button that opens the modal
+        var closeBtn = document.getElementsByClassName("modal-close")[0]; // Get the <span> element that closes the modal
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            modal.style.display = "block"; // Show the modal
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none"; // Hide the modal
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none"; // Hide the modal
+            }
+        }
+    }
+
+    // Initialize modal function on page load
+    window.onload = openModal;
+</script>
+</html>
