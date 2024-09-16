@@ -488,6 +488,13 @@ h4 {
 .show-scroll {
   bottom: 3rem;
 }
+.service-image {
+  width: 37% !important;
+  display: block !important;
+  margin: 0 auto !important;
+  max-width: 100%; /* Ensures responsive scaling */
+}
+
 
 @media screen and (min-width: 576px) {
   .home__container,
