@@ -1,8 +1,8 @@
 ---
 deployment:
   tasks:
-    - export DEPLOY_PATH=/home/rt4nf6qqauf3/svj-infotech
+    - export DEPLOY_PATH=/home/rt4nf6qqauf3
     - cd $DEPLOY_PATH
     - npm install
     - npm run build
-    - cp -R dist/* /home/rt4nf6qqauf3/svj-infotech
+    - cp -R dist/* cp -R dist/* /home/rt4nf6qqauf3/public_html
