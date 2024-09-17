@@ -5,4 +5,4 @@ deployment:
     - cd $DEPLOY_PATH
     - npm install
     - npm run build
-    - cp -R dist/* /path/to/public_html/
+    - cp -R dist/* cp -R dist/* /home/rt4nf6qqauf3/public_html
