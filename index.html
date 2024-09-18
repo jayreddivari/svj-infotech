@@ -10,7 +10,19 @@
         <script defer src="dist/js/app.js"></script>
         <link href="dist/js/../css/styles.css" rel="stylesheet">
         <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-        
+        <style>
+            .nav__logo {
+  display: block;
+  margin-right: auto; /* This pushes the logo to the left */
+}
+.nav__logo img {
+  height: 70px; /* Decreased from 70px to 50px */
+  width: auto;
+}
+.nav__menu {
+  margin-left: 20px; /* Add some space between logo and menu */
+}
+        </style>
         <!-- <style>
             /* Modal container */
             .modal {
@@ -95,7 +107,9 @@
         
         <header class="header" id="header" style="position: relative; background-color:cadetblue; padding: 15px 0;">
             <nav class="nav container">
-                <a class="nav__logo" href="#">SVJ Infotech</a>
+                <a class="nav__logo" href="#">
+                    <img src="/src/images/logo-image.jpeg" alt="SVJ Infotech Logo">
+                </a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list" style="list-style: none; display: flex; gap: 20px;">
@@ -312,23 +326,6 @@
             <i class="scrollup__icon bi bi-arrow-up"></i>
         </a>
     </body>
-
-    <!-- Modal Structure -->
-    <div id="applyModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <h4>Apply for Software Engineer</h4>
-            <form id="applyForm">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="resume">Upload Resume:</label>
-                <input type="file" id="resume" name="resume" required>
-                
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
 
     <!-- JavaScript to handle modal functionality -->
     <!-- <script>

@@ -69,7 +69,17 @@ body.dark-theme {
   --body-color: hsl(var(--hue), 8%, 13%);
   --container-color: hsl(var(--hue), 8%, 16%);
 }
-
+.nav__logo {
+  display: block;
+  margin-right: auto; /* This pushes the logo to the left */
+}
+.nav__logo img {
+  height: 20px; /* Decreased from 70px to 50px */
+  width: auto;
+}
+.nav__menu {
+  margin-left: 20px; /* Add some space between logo and menu */
+}
 .change-theme {
   position: absolute;
   right: 1.5rem;
