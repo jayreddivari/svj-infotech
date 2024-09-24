@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About SVJ Infotech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="dist/js/../css/styles.css" rel="stylesheet">
+    <style>
+     /* .container {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;   
+        }  */
+        .about__info {
+            flex: 2;
+        }
+        .about__img {
+            flex: 1;
+            max-width: 400px;
+        }
+        .about__img img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .section__title {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .about__description {
+            margin-bottom: 20px;
+        }
+        .core-values__section {
+            margin-top: 40px;
+        }
+        .core-values__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .core-value__item {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .core-value__item h3 {
+            color: #2c3e50;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .core-value__item ul {
+            padding-left: 20px;
+        }
+        .core-value__logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        .core-value__image {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .about__img {
+                max-width: 100%;
+            }
+        }
+                .scrollup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f05a28;
+            padding: 10px;
+            border-radius: 50%;
+            display: none;
+            z-index: 100;
+            transition: 0.3s;
+        }
+
+        .scrollup.show {
+            display: block;
+        }
+
+        .scrollup__icon {
+            color: white;
+            font-size: 20px;
+        }
+            .nav__logo {
+    display: block;
+    margin-right: auto; 
+    }
+    .nav__logo img {
+    height: 70px; 
+    width: auto;
+    }
+    .logo-container {
+            position: relative;
+        }
+        .logo-image {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="header" style="position: relative; background-color:cadetblue; padding: 15px 0;">
+        <nav class="nav container">
+            <a class="nav__logo" href="#">
+                <div class="logo-container">
+                    <img src="/src/images/logo-image.jpeg" alt="SVJ Infotech Logo" class="logo-image">
+                </div>
+                
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list" style="list-style: none; display: flex; gap: 20px;">
+                    <li class="nav__item">
+                        <a class="nav__link" href="/Home.html" style="text-decoration: none; font-size: 20px; font-weight: bold;">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="/about.html" style="text-decoration: none; font-size: 20px; font-weight: bold;">About us</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="/careers.html" style="text-decoration: none; font-size: 20px; font-weight: bold;">Careers</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#services" style="text-decoration: none; font-size: 20px; font-weight: bold;">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#contact" style="text-decoration: none; font-size: 20px; font-weight: bold;">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bi bi-list-nested"></i>
+            </div>
+        </nav>
+    </header>
+        <div class="nav__toggle" id="nav-toggle">
+            <i class="bi bi-list-nested"></i>
+        </div>
+    </nav>
+    <section class="about section" id="about">
+        <div class="about__container container">
+            <article class="about__img">
+                <img src="/src/images/software.jpeg" alt="SVJ Infotech Values" width="900" height="900">
+            </article>
+            <article class="about__info">
+                <h1 class="section__title">
+                    <span>About SVJ Infotech</span>
+                </h1>
+                <p class="about__description">
+                    At SVJ Infotech, we pride ourselves on being more than just a consulting firm. We are your dedicated technology partner, providing end-to-end solutions that are customized to fit your business objectives. With expertise across a broad spectrum of IT services, including cloud solutions, data management, software development, and IT infrastructure, we help you streamline operations and foster innovation.
+                </p>
+                <p class="about__description">
+                    Our team of experienced professionals is committed to delivering results that align with your vision. Whether you're a startup or an established enterprise, we have the expertise to scale with your business and adapt to evolving challenges. From consultation to implementation, we offer ongoing support to ensure that your business remains agile and competitive in today's dynamic market.
+                </p>
+            </article>
+        </div>
+    </section> 
+    <section class="core-values__section">
+        <h2 class="section__title">Our Core Values</h2>
+        <div class="core-values__grid">
+            <div class="core-value__item">
+                <img src="https://media.istockphoto.com/id/1317706283/photo/customer-experience-inscription-social-networking-concept-business-technology-internet-and.jpg?s=612x612&w=0&k=20&c=--DnUUMA6KAzESOTPDFIuRp-2hEj5eTTZRokFz_nahw=" alt="Customer Experience" class="core-value__image">
+                <h3>Customer Experience</h3>
+                <ul>
+                    <li>Best quality service value to maintain long-lasting customer relationships</li>
+                    <li>Support and reliability</li>
+                    <li>Efficiency and time adherence</li>
+                </ul>
+            </div>
+            <div class="core-value__item">
+                <svg class="core-value__logo" viewBox="0 0 100 100">
+                    <rect x="10" y="10" width="80" height="80" fill="#e74c3c"/>
+                    <text x="50" y="65" font-size="40" text-anchor="middle" fill="white">DE</text>
+                </svg>
+                <h3>Delivery Excellence</h3>
+                <ul>
+                    <li>Maintain high standards in every delivery within the timelines</li>
+                    <li>Enhance end-user acceptability</li>
+                    <li>Maintain a healthy operating margin for the project</li>
+                </ul>
+            </div>
+            <div class="core-value__item">
+                <svg class="core-value__logo" viewBox="0 0 100 100">
+                    <polygon points="50,10 90,90 10,90" fill="#2ecc71"/>
+                    <text x="50" y="70" font-size="40" text-anchor="middle" fill="white">I</text>
+                </svg>
+                <h3>Integrity</h3>
+                <ul>
+                    <li>Enabling economic growth through support and development services</li>
+                    <li>Respect for individuals and maintaining the honor code</li>
+                    <li>Ethical work practices</li>
+                </ul>
+            </div>
+            <div class="core-value__item">
+                <svg class="core-value__logo" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="#f39c12"/>
+                    <text x="50" y="65" font-size="40" text-anchor="middle" fill="white">PI</text>
+                </svg>
+                <h3>Practical Innovation</h3>
+                <ul>
+                    <li>Value for innovation</li>
+                    <li>Respect for new ideas</li>
+                    <li>Innovative approach to problem-solving</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer section">
+        <div class="footer__container container">
+            <article class="footer__content">
+                <a href="#" class="footer__logo">Solutions</a>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Cloud Solutions</a></li>
+                    <li><a href="#" class="footer__link">Staffing Solutions</a></li>
+                    <li><a href="#" class="footer__link">Software Development</a></li>
+                    <li><a href="#" class="footer__link">Managed Services</a></li>
+                </ul>
+            </article>
+
+            <article class="footer__content">
+                <h3 class="footer__title">Technologies</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Data Analytics</a></li>
+                    <li><a href="#" class="footer__link">Artificial Intelligence</a></li>
+                    <li><a href="#" class="footer__link">Application Development</a></li>
+                    <li><a href="#" class="footer__link">Cloud Infrastructure</a></li>
+                </ul>
+            </article>
+
+            <article class="footer__content">
+                <h3 class="footer__title">Industries</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Health Care</a></li>
+                    <li><a href="#" class="footer__link">Finance and Banking</a></li>
+                    <li><a href="#" class="footer__link">Oil and Energy</a></li>
+                    <li><a href="#" class="footer__link">Automotives</a></li>
+                    <li><a href="#" class="footer__link">e-Commerce</a></li>
+                </ul>
+            </article>
+
+            <article class="footer__content">
+                <h3 class="footer__title">Company</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">About SVJ Infotech</a></li>
+                    <li><a href="#" class="footer__link">Careers</a></li>
+                    <li><a href="#" class="footer__link">Mission and Values</a></li>
+                </ul>
+            </article>
+
+            <article class="footer__social">
+                <a href="#" class="footer__social-link">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="#" class="footer__social-link">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="footer__social-link">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="#" class="footer__social-link">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+            </article>
+        </div>
+        <p class="footer__copy">&#169; 2024 SVJ Infotech</p>
+        <!-- Scroll up button -->
+        <a href="#" class="scrollup" id="scrollup">
+            <i class="fas fa-arrow-up scrollup__icon"></i>
+        </a>
+        <script>
+            const scrollup = document.getElementById('scrollup');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollup.classList.add('show');
+                } else {
+                    scrollup.classList.remove('show');
+                }
+            });
+        </script>
+        
+
+    </footer>
+</body>
+</html>
