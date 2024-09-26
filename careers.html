@@ -6,71 +6,66 @@
     <title>SVJ Infotech Careers</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
+            body {
             font-family: 'Poppins', sans-serif;
             background-color: #f0f2f5;
             margin: 0;
             padding: 0;
             color: #333;
         }
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        header {
+
+        .header {
             display: flex;
             align-items: center;
             padding: 20px;
             background-color: #f5f5f5;
         }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         .nav__logo {
             flex-shrink: 0;
-            margin-right: 20px;
+            margin-right: 100px;
         }
+
         .nav__logo img {
             height: 70px;
             width: auto;
-            display: block;
         }
-        .header-content {
-            flex-grow: 1;
-            text-align: center;
+
+        .nav__menu {
+            margin-left: auto; 
+            padding-left: 200px;
         }
-        h1 {
+
+        .nav__list {
+            list-style: none;
+            display: flex;
+            gap: 40px;
             margin: 0;
-            font-size: 24px;
-            color: #bdc3c7;
+            padding: 0;
         }
-        .subtitle {
-            margin: 5px 0 0;
-            font-size: 16px;
-            color: #f0f2f5;
+
+        .nav__link {
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333; /* Customize link color as needed */
         }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            /* max-width: 1100px; */
+            /* margin: 0 auto; */
+            padding: 5px;
         }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        .subtitle {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
+
         .job-filters {
             display: flex;
             justify-content: center;
             margin: 20px 0;
         }
+
         .filter-btn {
             background-color: #3498db;
             color: white;
@@ -81,14 +76,18 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-        .filter-btn:hover, .filter-btn.active {
+
+        .filter-btn:hover,
+        .filter-btn.active {
             background-color: #2980b9;
         }
+
         .job-card-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
         }
+
         .job-card {
             background-color: white;
             border-radius: 10px;
@@ -96,16 +95,19 @@
             padding: 20px;
             transition: transform 0.2s, box-shadow 0.2s;
         }
+
         .job-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
+
         .job-title {
             font-size: 1.3em;
             font-weight: 600;
             margin-bottom: 10px;
             color: #2c3e50;
         }
+
         .job-type {
             display: inline-block;
             background-color: #e74c3c;
@@ -115,16 +117,19 @@
             font-size: 0.8em;
             margin-bottom: 10px;
         }
+
         .job-description {
             font-size: 0.9em;
             margin-bottom: 15px;
         }
+
         .job-info {
             display: flex;
             justify-content: space-between;
             font-size: 0.9em;
             color: #7f8c8d;
         }
+
         .apply-btn {
             display: block;
             width: 100%;
@@ -138,9 +143,11 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         .apply-btn:hover {
             background-color: #27ae60;
         }
+
         .modal {
             display: none;
             position: fixed;
@@ -151,6 +158,7 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
         }
+
         .modal-content {
             background-color: white;
             margin: 15% auto;
@@ -159,6 +167,7 @@
             width: 50%;
             max-width: 500px;
         }
+
         .modal-close {
             color: #aaa;
             float: right;
@@ -166,19 +175,24 @@
             font-weight: bold;
             cursor: pointer;
         }
+
         .modal-close:hover {
             color: #000;
         }
+
         form {
             display: flex;
             flex-direction: column;
         }
-        form input, form button {
+
+        form input,
+        form button {
             margin: 10px 0;
             padding: 10px;
             border-radius: 5px;
             border: 1px solid #bdc3c7;
         }
+
         form button {
             background-color: #3498db;
             color: white;
@@ -186,22 +200,48 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         form button:hover {
             background-color: #2980b9;
         }
+
     </style>
 </head>
 <body>
-    <header>
-        <a class="nav__logo" href="index.html">
-            <img src="/src/images/logo-image.jpeg" alt="SVJ Infotech Logo">
-        </a>
-        <div class="header-content">
-            <h1>SVJ Infotech Careers</h1>
-            <p class="subtitle">Join our team and shape the future of technology</p>
-        </div>
-    </header>
+    <header class="header" id="header" style="position: relative; background-color:cadetblue; padding: 9px 0;">
+        <nav class="nav container">
+            <a class="nav__logo" href="#">
+                <div class="logo-container">
+                    <img src="/src/images/logo-image.jpeg" alt="SVJ Infotech Logo" class="logo-image">
+                </div>
+                
+            </a>
 
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list" style="list-style: none; display: flex; gap: 20px;">
+                    <li class="nav__item">
+                        <a class="nav__link" href="/Home.html" style="text-decoration: none; font-size: 20px; font-weight: bold;">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="/about.html" style="text-decoration: none; font-size: 20px; font-weight: bold;">About us</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="/careers.html" style="text-decoration: none; font-size: 20px; font-weight: bold;">Careers</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#services" style="text-decoration: none; font-size: 20px; font-weight: bold;">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#contact" style="text-decoration: none; font-size: 20px; font-weight: bold;">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bi bi-list-nested"></i>
+            </div>
+        </nav>
+    </header>
     <div class="container">
         <div class="job-filters">
             <button class="filter-btn active" data-filter="all">All Jobs</button>
@@ -258,18 +298,11 @@
                 salary: "$80k–120K"
             },
             {
-                title: "Data Analyst",
+                title: "Data Scientist",
                 type: "Part Time",
-                description: "Analyze complex data sets to provide valuable insights and support data-driven decision making.",
-                location: "New York, NY",
-                salary: "$30k–45K"
-            },
-            {
-                title: "DevOps Engineer",
-                type: "Full Time",
-                description: "Implement and manage our cloud infrastructure, ensuring high availability and scalability.",
-                location: "Austin, TX",
-                salary: "$70k–100K"
+                description: "Analyze large datasets to derive actionable insights, helping to drive strategic decisions.",
+                location: "Remote",
+                salary: "$25k–30K"
             }
         ];
 
@@ -291,14 +324,32 @@
         function renderJobs(jobs) {
             const container = document.querySelector('.job-card-container');
             container.innerHTML = jobs.map(createJobCard).join('');
+
+            // Add event listeners to the "Apply Now" buttons
+            const applyButtons = document.querySelectorAll('.apply-btn');
+            applyButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const jobTitle = e.target.getAttribute('data-job');
+                    openModal(jobTitle);
+                });
+            });
         }
 
-        function filterJobs(filter) {
-            const filteredJobs = filter === 'all' 
-                ? jobsData 
-                : jobsData.filter(job => job.type.toLowerCase().replace(' ', '-') === filter);
-            renderJobs(filteredJobs);
+        function openModal(jobTitle) {
+            document.getElementById('modalJobTitle').innerText = jobTitle;
+            document.getElementById('applyModal').style.display = 'block';
         }
+
+        document.querySelector('.modal-close').addEventListener('click', () => {
+            document.getElementById('applyModal').style.display = 'none';
+        });
+
+        document.getElementById('applicationForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Application submitted successfully!');
+            document.getElementById('applyModal').style.display = 'none';
+            document.getElementById('applicationForm').reset();
+        });
 
         document.addEventListener('DOMContentLoaded', () => {
             renderJobs(jobsData);
@@ -308,30 +359,12 @@
                 btn.addEventListener('click', (e) => {
                     filterButtons.forEach(b => b.classList.remove('active'));
                     e.target.classList.add('active');
-                    filterJobs(e.target.getAttribute('data-filter'));
+                    const filter = e.target.getAttribute('data-filter');
+                    const filteredJobs = filter === 'all' 
+                        ? jobsData 
+                        : jobsData.filter(job => job.type.toLowerCase().replace(' ', '-') === filter);
+                    renderJobs(filteredJobs);
                 });
-            });
-
-            const modal = document.getElementById('applyModal');
-            const modalClose = document.querySelector('.modal-close');
-            const modalJobTitle = document.getElementById('modalJobTitle');
-
-            document.addEventListener('click', (e) => {
-                if (e.target.classList.contains('apply-btn')) {
-                    modal.style.display = 'block';
-                    modalJobTitle.textContent = e.target.getAttribute('data-job');
-                }
-            });
-
-            modalClose.onclick = () => modal.style.display = 'none';
-            window.onclick = (e) => {
-                if (e.target === modal) modal.style.display = 'none';
-            };
-
-            document.getElementById('applicationForm').addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Application submitted successfully!');
-                modal.style.display = 'none';
             });
         });
     </script>

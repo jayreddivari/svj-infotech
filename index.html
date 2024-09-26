@@ -11,17 +11,65 @@
         <link href="dist/js/../css/styles.css" rel="stylesheet">
         <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
         <style>
-            .nav__logo {
+    .nav__logo {
   display: block;
-  margin-right: auto; /* This pushes the logo to the left */
+  margin-right: auto; 
 }
 .nav__logo img {
-  height: 70px; /* Decreased from 70px to 50px */
+  height: 70px; 
   width: auto;
 }
+.nav__logo {
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
 .nav__menu {
   margin-left: 20px; /* Add some space between logo and menu */
 }
+.logo-container {
+        position: relative;
+        display: inline-block;
+        background-color: #f0f0f0; 
+    }
+
+    .logo-image {
+        position: relative;
+        z-index: 1;
+        display: block;
+    }
+
+    /* Blurred background */
+    .logo-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: white; /* Adjust this if necessary */
+        z-index: 0;
+        filter: blur(8px); /* Change the value for more or less blur */
+    }
+     .scrollup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f05a28;
+            padding: 10px;
+            border-radius: 50%;
+            display: none;
+            z-index: 100;
+            transition: 0.3s;
+        }
+
+        .scrollup.show {
+            display: block;
+        }
+
+        .scrollup__icon {
+            color: white;
+            font-size: 20px;
+        }
         </style>
         <!-- <style>
             /* Modal container */
@@ -104,20 +152,22 @@
                     <img src="/src/images/alternate_image.jpg" alt="Alternate Image" style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translateX(-50%) translateY(-50%);">
                 </video>
                 <div style="position: relative; z-index: 1;">
-        
         <header class="header" id="header" style="position: relative; background-color:cadetblue; padding: 15px 0;">
             <nav class="nav container">
                 <a class="nav__logo" href="#">
-                    <img src="/src/images/logo-image.jpeg" alt="SVJ Infotech Logo">
+                    <div class="logo-container">
+                        <img src="/src/images/logo-image.jpeg" alt="SVJ Infotech Logo" class="logo-image">
+                    </div>
+                    
                 </a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list" style="list-style: none; display: flex; gap: 20px;">
                         <li class="nav__item">
-                            <a class="nav__link" href="#home" style="text-decoration: none; font-size: 20px; font-weight: bold;">Home</a>
+                            <a class="nav__link" href="/Home.html" style="text-decoration: none; font-size: 20px; font-weight: bold;">Home</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="#about" style="text-decoration: none; font-size: 20px; font-weight: bold;">About us</a>
+                            <a class="nav__link" href="/about.html" style="text-decoration: none; font-size: 20px; font-weight: bold;">About us</a>
                         </li>
                         <li class="nav__item">
                             <a class="nav__link" href="/careers.html" style="text-decoration: none; font-size: 20px; font-weight: bold;">Careers</a>
