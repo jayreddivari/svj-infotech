@@ -39,6 +39,6 @@ You can upload and replace your business images as below template in the `images
   
 
 ## Authors
-Reza Azimifar
+Jayanthi Reddivari
 
 <a href="mailto: reddy.jayanthi.jr@gmail.com@gmail.com">![Static Badge](https://img.shields.io/badge/Gmail%20-%20%23282828?style=for-the-badge&logo=gmail&color=%23282828)</a>
