@@ -3,8 +3,8 @@
 const path = require("path");
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const fs = require('fs');
 
 
@@ -13,7 +13,8 @@ module.exports = {
     output: {
         filename: "app.js",
         path: path.resolve(__dirname, "./dist/js"),
-        assetModuleFilename: "../images/[name][ext]"
+        assetModuleFilename: "../img/[name][ext]",
+        clean: true
     },
     mode: "none",
     module: {
@@ -48,7 +49,11 @@ module.exports = {
                 filename: "../css/styles.css",
             }
         ),
-        new CleanWebpackPlugin(),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: "src/img", to: "../img" }
+            ]
+        }),
         ...fs.readdirSync(path.resolve(__dirname, 'src'))
             .filter((name) => name.endsWith('.html'))
             .map((name) => new HtmlWebpackPlugin({

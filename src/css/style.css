@@ -174,3 +174,15 @@ body {
   .top-bar .col-4 { margin-bottom: 0.75rem; }
   .top-bar .d-lg-block { display: none !important; }
 }
+
+/* Non-clickable service labels inside navbar dropdown */
+.dropdown-menu .no-link {
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Disable service-detail links globally */
+a[data-href-disabled] {
+    pointer-events: none;
+    cursor: default;
+}
