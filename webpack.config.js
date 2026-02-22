@@ -5,6 +5,8 @@ const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const fs = require('fs');
+
 
 module.exports = {
     entry: "./src/js/app.js",
@@ -47,11 +49,11 @@ module.exports = {
             }
         ),
         new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin(
-            {
-                filename: "../index.html",
-                template: "index.html"
-            }
-        )
+        ...fs.readdirSync(path.resolve(__dirname, 'src'))
+            .filter((name) => name.endsWith('.html'))
+            .map((name) => new HtmlWebpackPlugin({
+                filename: `../${name}`,
+                template: `src/${name}`,
+            }))
     ]
 }

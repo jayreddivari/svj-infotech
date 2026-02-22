@@ -3,6 +3,7 @@ deployment:
   tasks:
     - export DEPLOY_PATH=/home/rt4nf6qqauf3
     - cd $DEPLOY_PATH
-    - npm install
-    - npm run build
-    - cp -R dist/* cp -R dist/* /home/rt4nf6qqauf3/public_html
+    - cp -R src/* /home/rt4nf6qqauf3/public_html/
+    # - npm install
+    # - npm run build
+    # - cp -R dist/* cp -R dist/* /home/rt4nf6qqauf3/public_html
